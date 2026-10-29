@@ -561,3 +561,23 @@ h2 {
     font-size: 27px;
   }
 }
+
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: #F5F7FB;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #8294FF;
+}
