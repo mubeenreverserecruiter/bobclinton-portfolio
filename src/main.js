@@ -23,7 +23,7 @@ app.innerHTML = `
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="/contact.html">Get in touch ↗</a>
-        <a class="button button-secondary" href="/contact.html">Start a conversation</a>
+        <a class="button button-primary" href="#services">Explore my work ↘</a>
       </div>
       <div class="hero-note">
         <span class="status-dot"></span>
