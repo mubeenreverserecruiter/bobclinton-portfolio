@@ -7,11 +7,10 @@ app.innerHTML = `
   <header class="site-header">
     <a class="wordmark" href="#home">BOBCLINTON HARDY<span>.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a class="nav-cta" href="contact.html">Let's Talk ↗</a>
-    </nav>
+  <a href="/">Home</a>
+  <a href="/contact.html">Contact</a>
+  <a class="nav-cta" href="/contact.html">Let's Talk ↗</a>
+</nav>
   </header>
 
   <main>
