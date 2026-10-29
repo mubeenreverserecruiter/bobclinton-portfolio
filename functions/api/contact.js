@@ -38,7 +38,7 @@ export async function onRequestPost({ request, env }) {
       body: JSON.stringify({
         sender: {
           name: "Bobclinton Hardy Website",
-          email: "YOUR_VERIFIED_BREVO_SENDER_EMAIL"
+          email: "mubeenreverserecruiter@gmail.com"
         },
         to: [
           {
