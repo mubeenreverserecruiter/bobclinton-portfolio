@@ -5,12 +5,11 @@ const app = document.querySelector('#root');
 
 app.innerHTML = `
   <header class="site-header">
-    <a class="wordmark" href="index.html">BOBCLINTON HARDY<span>.</span></a>
+    <a class="wordmark" href="/">BOBCLINTON HARDY<span>.</span></a>
     <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a class="nav-cta" href="contact.html">Let's Talk ↗</a>
+      <a href="/">Home</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+      <a class="nav-cta" href="/contact.html">Let's Talk ↗</a>
     </nav>
   </header>
 
@@ -30,13 +29,13 @@ app.innerHTML = `
         <h2>Start a conversation.</h2>
 
         <form id="contact-form">
-          <label for="name">Your name</label>
+          <label for="name">Your full name</label>
           <input id="name" name="name" type="text" autocomplete="name"
-            placeholder="Full name" required />
+            placeholder="Full name" maxlength="150" required />
 
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" autocomplete="email"
-            placeholder="you@example.com" required />
+            placeholder="you@example.com" maxlength="254" required />
 
           <label for="project">What do you need help with?</label>
           <select id="project" name="project" required>
@@ -51,15 +50,14 @@ app.innerHTML = `
           </select>
 
           <label for="details">Tell me about your idea</label>
-          <textarea id="details" name="details" rows="5"
+          <textarea id="details" name="details" rows="5" maxlength="10000"
             placeholder="What are you looking to create?" required></textarea>
 
-          <button class="button button-primary" type="button" disabled>
-            Contact form setup in progress
+          <button class="button button-primary" id="submit-button" type="submit">
+            Send Message ↗
           </button>
-          <p class="form-note">
-            The form will be activated before the website goes live.
-          </p>
+
+          <p id="form-status" class="form-note" role="status" aria-live="polite"></p>
         </form>
       </div>
 
@@ -87,14 +85,54 @@ app.innerHTML = `
           </div>
         </div>
 
-        <a class="back-link" href="index.html">← Back to the homepage</a>
+        <a class="back-link" href="/">← Back to the homepage</a>
       </aside>
     </section>
   </main>
 
   <footer class="site-footer">
-    <a class="wordmark" href="index.html">BOBCLINTON HARDY<span>.</span></a>
+    <a class="wordmark" href="/">BOBCLINTON HARDY<span>.</span></a>
     <p>Creative production. AI innovation. Smarter workflows.</p>
     <span>© ${new Date().getFullYear()} Bobclinton Hardy</span>
   </footer>
 `;
+
+const form = document.querySelector('#contact-form');
+const button = document.querySelector('#submit-button');
+const status = document.querySelector('#form-status');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  button.disabled = true;
+  button.textContent = 'Sending…';
+  status.textContent = '';
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Unable to send your message.');
+    }
+
+    form.reset();
+    status.textContent = 'Thank you! Your enquiry has been sent successfully.';
+  } catch (error) {
+    status.textContent =
+      error.message || 'Something went wrong. Please try again later.';
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Send Message ↗';
+  }
+});
