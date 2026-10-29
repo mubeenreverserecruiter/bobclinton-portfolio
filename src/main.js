@@ -79,7 +79,7 @@ app.innerHTML = `
     <section class="closing section">
       <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
       <h2>Let's make something <span>worth seeing.</span></h2>
-      <a class="button button-primary" href="contact.html">Get in touch ↗</a>
+      <a class="button button-primary" href="/contact.html">Get in touch ↗</a>
     </section>
   </main>
 
