@@ -61,32 +61,45 @@ app.innerHTML = `
         </form>
       </div>
 
-      <aside class="contact-side">
-        <p class="eyebrow">A GOOD PLACE TO START</p>
-        <h2>Tell me what you're imagining.</h2>
-        <p>
-          A little context about your goals, timeline and the outcome
-          you're looking for will help us take the next step.
-        </p>
+      
+<aside class="contact-side">
+  <p class="eyebrow">A GOOD PLACE TO START</p>
+  <h2>Tell me what you're imagining.</h2>
+  <p>
+    A little context about your goals, timeline and the outcome
+    you're looking for will help us take the next step.
+  </p>
 
-        <div class="contact-detail">
-          <span>01</span>
-          <div>
-            <h3>Share the idea</h3>
-            <p>Explain the project or problem you'd like to solve.</p>
-          </div>
-        </div>
+  <div class="contact-detail">
+    <span>01</span>
+    <div>
+      <h3>Share the idea</h3>
+      <p>Explain the project or problem you'd like to solve.</p>
+    </div>
+  </div>
 
-        <div class="contact-detail">
-          <span>02</span>
-          <div>
-            <h3>Explore the possibilities</h3>
-            <p>We'll identify a practical direction for moving forward.</p>
-          </div>
-        </div>
+  <div class="contact-detail">
+    <span>02</span>
+    <div>
+      <h3>Explore the possibilities</h3>
+      <p>We'll identify a practical direction for moving forward.</p>
+    </div>
+  </div>
 
-        <a class="back-link" href="/">← Back to the homepage</a>
-      </aside>
+  <div class="direct-contact">
+    <h3>Prefer a direct conversation?</h3>
+    <a class="button button-primary" href="https://wa.me/2349067086330" target="_blank" rel="noopener noreferrer">
+      Chat on WhatsApp ↗
+    </a>
+    <p>
+      Or call:
+      <a href="tel:+2349067086330">+234 906 708 6330</a>
+    </p>
+  </div>
+
+  <a class="back-link" href="/">← Back to the homepage</a>
+</aside>
+
     </section>
   </main>
 
