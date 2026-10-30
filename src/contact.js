@@ -103,11 +103,21 @@ app.innerHTML = `
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="wordmark" href="/">BOBCLINTON HARDY<span>.</span></a>
-    <p>Creative production. AI innovation. Smarter workflows.</p>
-    <span>© ${new Date().getFullYear()} Bobclinton Hardy</span>
-  </footer>
+  
+<footer class="site-footer">
+  <a class="wordmark" href="/">BOBCLINTON HARDY<span>.</span></a>
+  <p>Creative production. AI innovation. Smarter workflows.</p>
+
+  <div class="social-links">
+    <a href="https://www.tiktok.com/@bobclintonhardy1" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+    <a href="https://youtube.com/@dhardystudio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://wa.me/2349067086330" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    <a href="tel:+2349067086330">Call: +234 906 708 6330</a>
+  </div>
+
+  <span>© ${new Date().getFullYear()} Bobclinton Hardy</span>
+</footer>
+
 `;
 
 const form = document.querySelector('#contact-form');
