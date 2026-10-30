@@ -15,21 +15,26 @@ app.innerHTML = `
 
   <main>
     <section class="hero" id="home">
-      <p class="eyebrow">CREATIVE PRODUCTION · ARTIFICIAL INTELLIGENCE</p>
-      <h1>Ideas into <span>extraordinary</span> digital experiences.</h1>
-      <p class="hero-copy">
-        I work at the intersection of video, storytelling and AI —
-        creating compelling content and smarter digital workflows.
-      </p>
-      <div class="hero-actions">
-  <a class="button button-primary" href="#services">Explore my work ↘</a>
-  <a class="button button-secondary" href="/contact.html">Start a conversation</a>
-</div>
-      <div class="hero-note">
-        <span class="status-dot"></span>
-        VIDEO · AI FILMMAKING · CREATIVE AUTOMATION
-      </div>
-    </section>
+  <p class="eyebrow">YOUTUBE AI AUTOMATION · CREATIVE PRODUCTION</p>
+
+  <h1>Building <span>smarter YouTube experiences</span> with AI.</h1>
+
+  <p class="hero-copy">
+    I help turn ideas into engaging digital content through
+    YouTube automation, AI-powered video production and
+    intelligent creative workflows.
+  </p>
+
+  <div class="hero-actions">
+    <a class="button button-primary" href="#work">Explore my work ↘</a>
+    <a class="button button-secondary" href="/contact.html">Work with me</a>
+  </div>
+
+  <div class="hero-note">
+    <span class="status-dot"></span>
+    YOUTUBE AUTOMATION · AI CONTENT · VIDEO PRODUCTION
+  </div>
+</section>
 
     <section class="intro section" id="about">
       <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
