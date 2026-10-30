@@ -43,7 +43,59 @@ app.innerHTML = `
         </p>
       </div>
     </section>
+    <section class="section featured-work" id="work">
+      <p class="eyebrow">02 / SELECTED WORK</p>
+      <h2>A look at what <span>I create.</span></h2>
+      <p class="section-description">
+        Explore selected projects, creative experiments and practical
+        demonstrations of my work in AI-powered content creation.
+      </p>
 
+      <div class="video-grid">
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7635359833696275733" data-video-id="7635359833696275733">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7636361571169537301" data-video-id="7636361571169537301">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7646541908004719892" data-video-id="7646541908004719892">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7653415229073673492" data-video-id="7653415229073673492">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7638779399327829269" data-video-id="7638779399327829269">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7647208448437783829" data-video-id="7647208448437783829">
+            <section></section>
+          </blockquote>
+        </div>
+
+        <div class="video-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simplyhardy/video/7633761966250609941" data-video-id="7633761966250609941">
+            <section></section>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    
     <section class="section services" id="services">
       <p class="eyebrow">02 / WHAT I DO</p>
       <h2>Ideas, shaped into <span>possibilities.</span></h2>
@@ -98,3 +150,7 @@ app.innerHTML = `
   <span>© ${new Date().getFullYear()} Bobclinton Hardy</span>
 </footer>
 `;
+const tiktokScript = document.createElement('script');
+tiktokScript.src = 'https://www.tiktok.com/embed.js';
+tiktokScript.async = true;
+document.body.appendChild(tiktokScript);
